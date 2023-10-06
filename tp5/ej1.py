@@ -11,6 +11,7 @@ fDerivada=[]
 derivada=[]
 dif=[]
 newDerivada=[]
+matriz=[]
 h=0.1
 i=0
 c=0
@@ -121,3 +122,23 @@ while c <= 0.7:
     print(f"diferencia {i}: {newDif[i]}")
     c += h
     i += 1
+
+c = 0
+print(" ")
+while c <= 0.7:
+    
+    
+
+    c += h
+
+for i in range(8):
+    fila = list()
+    fila.append(x[i])
+    fila.append(funcion[i])
+    fila.append(derivada[i])
+    fila.append(newDerivada[i])
+    fila.append(dif[i])
+    fila.append(newDif[i])
+    matriz.append(fila)
+
+print(tabulate(matriz, headers=["x", "funcion", "derivada", "newDerivada", "diferencia", "newDif"]))
