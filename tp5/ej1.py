@@ -1,4 +1,5 @@
 import math
+from tabulate import tabulate
     
 print("ejercicio 1")
 
