@@ -1,10 +1,10 @@
 import math
 from tabulate import tabulate
-print("ejercicio 1 metodo de los trapecios")
+print("ejercicio 2 metodo de los trapecios")
 
 n=10
-a=0
-b=math.pi
+a=-3
+b=5
 i=0
 x=[]
 funcion=[]
@@ -18,8 +18,8 @@ pri=(b-a)/(2*n)
 
 while i <= n:
     x.append((i*(b-a))/n)
-    funcion.append(8+5*math.cos(x[i]))
-    devSeg.append(-5*math.cos(x[i]))
+    funcion.append(1-x[i]-4*x[i]**3+3*x[i]**5)
+    devSeg.append(-24*x[i]+60*x[i]**3)
     i+=1
 
 i=1
@@ -47,7 +47,7 @@ print(" ")
 It=(pri)*(funcion[0]+2*suma+funcion[n])
 print(f"It: {It}")
 
-Vreal=25.13274
+Vreal=6904
 print(f"valor real: {Vreal}")
 
 print(" ")
