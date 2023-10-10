@@ -47,7 +47,7 @@ print(" ")
 It=(pri)*(funcion[0]+2*suma+funcion[n])
 print(f"It: {It}")
 
-Vreal=6904
+Vreal = 0.3047
 print(f"valor real: {Vreal}")
 
 print(" ")
