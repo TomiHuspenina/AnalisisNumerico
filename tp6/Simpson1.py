@@ -1,6 +1,7 @@
 import math
 
 print("metodo simpson ejercicio 1")
+print(" ")
 
 a=0
 b=math.pi

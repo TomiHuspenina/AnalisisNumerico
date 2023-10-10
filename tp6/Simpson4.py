@@ -1,10 +1,10 @@
 import math
 
-print("metodo simpson ejercicio 2")
+print("metodo simpson ejercicio 4")
 print(" ")
 
-a=-3
-b=5
+a=0
+b=4
 n=10
 h=(b-a)/n
 funcion=[]
@@ -13,7 +13,7 @@ x=[]
 i=0
 while i <= n:
     x.append((i*(b-a))/n)
-    funcion.append(1-x[i]-4*x[i]**3+3*x[i]**5)
+    funcion.append(x[i]*math.exp(x[i]*2))
     print(f"funcion {i} para {x[i]}: {funcion[i]}")
     i+=1
 
@@ -35,7 +35,7 @@ print(f"funcion par: {fpar}")
 Is=(b-a)*(funcion[0]+4*fimpar+2*fimpar+funcion[n])/(3*n)
 print(f"valor de Is: {Is}")
 
-Vreal=6904
+Vreal = 5216.92647
 Error=abs(Vreal-Is)
 print(f"Error real cometido: {Error}")
 print(" ")
