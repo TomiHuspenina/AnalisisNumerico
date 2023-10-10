@@ -34,7 +34,7 @@ print(f"funcion par: {fpar}")
 Is=(b-a)*(funcion[0]+4*fimpar+2*fimpar+funcion[n])/(3*n)
 print(f"valor de Is: {Is}")
 
-Vreal=25.13274
+Vreal = 25.13274
 Error=abs(Vreal-Is)
 print(f"Error real cometido: {Error}")
 print(" ")

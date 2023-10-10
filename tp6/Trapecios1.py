@@ -57,7 +57,7 @@ print(f"Et: {Et}")
 print(" ")
 
 Error=abs(Vreal-It)
-print(f"error cometido: {Error}")
+print(f"error real cometido: {Error}")
 
 i=0
 while i<len(x):
