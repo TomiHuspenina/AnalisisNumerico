@@ -12,7 +12,7 @@ x=[]
 
 i=0
 while i <= n:
-    x.append((i*(b-a))/n)
+    x.append(i*h+a)
     funcion.append(8+5*math.cos(x[i]))
     print(f"funcion {i} para {x[i]}: {funcion[i]}")
     i+=1

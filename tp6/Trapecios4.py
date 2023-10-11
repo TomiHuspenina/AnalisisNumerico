@@ -5,6 +5,7 @@ print("ejercicio 4 metodo de los trapecios")
 n=10
 a=0
 b=4
+h=(a+b)/n
 i=0
 x=[]
 funcion=[]
@@ -17,7 +18,7 @@ Itotal=0
 pri=(b-a)/(2*n)
 
 while i <= n:
-    x.append((i*(b-a))/n)
+    x.append(i*h+a)
     funcion.append(x[i]*math.exp(x[i]*2))
     devSeg.append(4*math.exp(2*x[i])+4*x[i]*math.exp(2*x[i]))
     i+=1

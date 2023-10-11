@@ -12,7 +12,7 @@ x=[]
 
 i=0
 while i <= n:
-    x.append((i*(b-a))/n)
+    x.append(i*h+a)
     funcion.append(math.sin(5*x[i]+1))
     print(f"funcion {i} para {x[i]}: {funcion[i]}")
     i+=1

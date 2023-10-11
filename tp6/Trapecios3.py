@@ -5,6 +5,7 @@ print("ejercicio 3 metodo de los trapecios")
 n=8
 a=0
 b=(3*math.pi)/20
+h=(b-a)/n
 i=0
 x=[]
 funcion=[]
@@ -17,7 +18,7 @@ Itotal=0
 pri=(b-a)/(2*n)
 
 while i <= n:
-    x.append((i*(b-a))/n)
+    x.append(i*h+a)
     funcion.append(math.sin(5*x[i]+1))
     devSeg.append(-25*math.sin(5*x[i]+1))
     i+=1

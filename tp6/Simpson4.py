@@ -12,7 +12,7 @@ x=[]
 
 i=0
 while i <= n:
-    x.append((i*(b-a))/n)
+    x.append(i*h+a)
     funcion.append(x[i]*math.exp(x[i]*2))
     print(f"funcion {i} para {x[i]}: {funcion[i]}")
     i+=1
