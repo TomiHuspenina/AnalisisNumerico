@@ -28,6 +28,29 @@ while i <= n:
    sumaDevS+=devSeg[i]
    i+=1
 
+
+i=0
+while i<len(x):
+    fila1 = list()
+    fila1.append(i)
+    fila1.append(x[i])
+    fila1.append(funcion[i])
+    matriz1.append(fila1)
+    i+=1
+
+print(tabulate(matriz1, headers=["i", "x", "funcion"]))
+
+i=1
+while i<len(x):
+    fila2 = list()
+    fila2.append(i)
+    fila2.append(x[i])
+    fila2.append(devSeg[i])
+    matriz2.append(fila2)
+    i+=1
+
+print(tabulate(matriz2, headers=["i", "x", "Derivada2"]))
+
 print(" ")
 print(f"suma derivada segunda: {sumaDevS}")
 print(" ")
@@ -47,35 +70,14 @@ print(f"suma de 1 a n-1: {suma}")
 print(" ")
 It=(pri)*(funcion[0]+2*suma+funcion[n])
 print(f"It: {It}")
-
+print(" ")
 Vreal = 0.3047
 print(f"valor real: {Vreal}")
 
 print(" ")
 Et=-(((b-a)**3)/(12*n*n))*fn
 print(f"Et: {Et}")
-
 print(" ")
 
 Error=abs(Vreal-It)
 print(f"error cometido: {Error}")
-
-i=0
-while i<len(x):
-    fila1 = list()
-    fila1.append(x[i])
-    fila1.append(funcion[i])
-    matriz1.append(fila1)
-    i+=1
-
-print(tabulate(matriz1, headers=["x", "funcion"]))
-
-i=1
-while i<len(x):
-    fila2 = list()
-    fila2.append(x[i])
-    fila2.append(devSeg[i])
-    matriz2.append(fila2)
-    i+=1
-
-print(tabulate(matriz2, headers=["x", "Derivada2"]))

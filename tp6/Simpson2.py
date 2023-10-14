@@ -1,5 +1,5 @@
 import math
-
+from tabulate import tabulate
 print("metodo simpson ejercicio 2")
 print(" ")
 
@@ -9,13 +9,24 @@ n=10
 h=(b-a)/n
 funcion=[]
 x=[]
+matriz=[]
 
 i=0
 while i <= n:
     x.append(i*h+a)
     funcion.append(1-x[i]-4*x[i]**3+3*x[i]**5)
-    print(f"funcion {i} para {x[i]}: {funcion[i]}")
     i+=1
+
+i=0
+while i<=n:
+    fila = list()
+    fila.append(i)
+    fila.append(x[i])
+    fila.append(funcion[i])
+    matriz.append(fila)
+    i+=1
+
+print(tabulate(matriz, headers=["i", "x", "funcion"]))
 
 fpar=0
 fimpar=0
@@ -32,10 +43,10 @@ while i<=n-2:
 print(" ")
 print(f"funcion impar: {fimpar}")
 print(f"funcion par: {fpar}")
-Is=(b-a)*(funcion[0]+4*fimpar+2*fimpar+funcion[n])/(3*n)
+
+Is=(b-a)*(funcion[0]+4*fimpar+2*fpar+funcion[n])/(3*n)
 print(f"valor de Is: {Is}")
 
 Vreal=6904
 Error=abs(Vreal-Is)
 print(f"Error real cometido: {Error}")
-print(" ")
