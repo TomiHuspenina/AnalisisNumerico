@@ -3,6 +3,7 @@ from tabulate import tabulate
 
 f=[]
 x=[]
+matriz=[]
 valorf=0
 valorx=0
 
@@ -22,6 +23,16 @@ b=x[n]
 h=(b-a)/(n)
 suma=0
 
+i=0
+while i<=n:
+   fila=list()
+   fila.append(i)
+   fila.append(x[i])
+   fila.append(f[i])
+   matriz.append(fila)
+   i+=1
+
+print(tabulate(matriz, headers=["i", "x[i]", "f[x]"]))
 
 i=1
 while i<=n-1:

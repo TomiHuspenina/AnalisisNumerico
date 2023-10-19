@@ -1,7 +1,9 @@
 import math
+from tabulate import tabulate
 
 f=[]
 x=[]
+matriz=[]
 valorf=0
 valorx=0
 
@@ -14,12 +16,7 @@ while i<=n:
    valorf=float(input(f"ingrese f[{x[i]}]   "))
    f.append(valorf)
    print(" ")
-   print(f"f: {f[i]}")
-   print(" ")
    i+=1
-
-
-
 
 a=x[0]
 b=x[n]
@@ -31,6 +28,18 @@ while i<=n-1:
    fimpar=fimpar+f[i]
    i+=2
 
+i=0
+while i<=n:
+   fila=list()
+   fila.append(i)
+   fila.append(x[i])
+   fila.append(f[i])
+   matriz.append(fila)
+   i+=1
+
+print(tabulate(matriz, headers=["i", "x[i]", "f[x]"]))
+
+print(" ")
 print(f"impar: {fimpar}")
 print(" ")
 
