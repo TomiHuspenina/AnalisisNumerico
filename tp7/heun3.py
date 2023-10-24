@@ -3,15 +3,15 @@ from tabulate import tabulate
 
 a = 0
 b = 4
-h = 0.1
+h = 0.01
 i = 0
 matriz = []
 n = int((b - a) / h) + 1
 
 def f(x, y):
-    return math.exp(0.8 * x) - 0.50 * y
+    return y*x**2-y
 
-y = 2
+y = 1
 x = 0
 heun=y
 yaux=0
